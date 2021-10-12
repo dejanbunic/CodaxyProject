@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "2dea7c1a-4148-4352-a203-862934bc87f0",
+		"name": "CodaxyPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "AddItemInCart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"kokice\",\"description\":\"slane i ekstra ljute\",\"timeCreated\":\"2021-10-07T22:54:39.1557907\",\"timeUpdated\":\"2021-10-07T22:54:39.1558347\",\"createdBy\":\"Dejan Bunic\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44326/api/carts/addCartItem/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44326",
+							"path": [
+								"api",
+								"carts",
+								"addCartItem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SubmitCart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44326/api/carts/submitCart/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44326",
+							"path": [
+								"api",
+								"carts",
+								"submitCart",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelCart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44326/api/carts/cancelCart/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44326",
+							"path": [
+								"api",
+								"carts",
+								"cancelCart",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authorize",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"test1\", \"password\":\"password1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44326/api/carts/authenticate",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44326",
+							"path": [
+								"api",
+								"carts",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GetAllCarts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44326/api/carts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44326",
+							"path": [
+								"api",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCartById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44326/api/carts/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44326",
+							"path": [
+								"api",
+								"carts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCartItemById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44326/api/cartitems/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44326",
+							"path": [
+								"api",
+								"cartitems",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "DeleteCartItemFromCartById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44326/api/carts/deleteCartItem/10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44326",
+							"path": [
+								"api",
+								"carts",
+								"deleteCartItem",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjMzODkyMDc0LCJleHAiOjE2NjU0MjgwNzQsImlhdCI6MTYzMzg5MjA3NH0.XwGg--CrPChJ-mVB6Cxp_4ttt2ycSj-darDQfVRNoKI",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
