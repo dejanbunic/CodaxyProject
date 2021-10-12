@@ -1,4 +1,5 @@
 Steps to configure project:
   1. Open Package Manager Console and create migration with command Add-Migration [migration_name]
   2. In Package Manager Console write command Update-Database and create database from model
+  3. File CodaxyPostman contains collection with requests for api.
   
